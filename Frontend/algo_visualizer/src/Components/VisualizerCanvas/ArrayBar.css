@@ -1,0 +1,26 @@
+.array-bar {
+    background: var(--secondary);
+    border-radius: 2px 2px 0 0;
+    transition: height 0.2s ease-in-out, background 0.2s;
+    box-shadow: 0 0 5px var(--secondary-glow);
+}
+
+.array-bar.comparing {
+    background: var(--accent-amber);
+    box-shadow: 0 0 10px var(--accent-amber);
+}
+
+.array-bar.swapping {
+    background: var(--accent-pink);
+    box-shadow: 0 0 10px var(--accent-pink);
+}
+
+.array-bar.sorted {
+    background: var(--success-green);
+    box-shadow: 0 0 10px var(--success-green);
+}
+
+.array-bar.idle {
+    background: var(--secondary);
+    box-shadow: 0 0 5px var(--secondary-glow);
+}

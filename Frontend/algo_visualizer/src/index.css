@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Fira+Code:wght@400;500&display=swap');
+
+:root {
+  /* Colors */
+  --bg-dark: #0a0e17;
+  --bg-darker: #05070a;
+  --glass: rgba(255, 255, 255, 0.05);
+  --glass-border: rgba(255, 255, 255, 0.1);
+  --primary: #7b2cbf;
+  --primary-glow: rgba(123, 44, 191, 0.5);
+  --secondary: #4cc9f0;
+  --secondary-glow: rgba(76, 201, 240, 0.5);
+  --accent-amber: #ff9e00;
+  --accent-pink: #f72585;
+  --success-green: #06d6a0;
+  --text-main: #e0e6ed;
+  --text-dim: #94a3b8;
+
+  /* Spacing & Sizes */
+  --nav-height: 70px;
+  --control-height: 80px;
+  --transition-speed: 0.3s;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0;
+  font-family: 'Inter', -apple-system, sans-serif;
+  background-color: var(--bg-dark);
+  color: var(--text-main);
+  overflow: hidden;
+  /* Prevent scrolling for the dashboard feel */
+  -webkit-font-smoothing: antialiased;
+}
+
+code {
+  font-family: 'Fira Code', monospace;
+}
+
+/* Custom Scrollbar for visual elements if needed */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-darker);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--glass-border);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--text-dim);
+}
+
+/* Utility Classes */
+.glass {
+  background: var(--glass);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid var(--glass-border);
+  border-radius: 12px;
+}
+
+.neon-button {
+  background: var(--primary);
+  color: white;
+  border: none;
+  padding: 10px 24px;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all var(--transition-speed);
+  box-shadow: 0 0 15px var(--primary-glow);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.neon-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0 25px var(--primary-glow);
+  filter: brightness(1.1);
+}
+
+.neon-button:disabled {
+  background: var(--text-dim);
+  box-shadow: none;
+  cursor: not-allowed;
+  transform: none;
+}

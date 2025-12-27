@@ -1,0 +1,66 @@
+.footer-info {
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 40px;
+    background: rgba(0, 0, 0, 0.4);
+    border-top: 1px solid var(--glass-border);
+    border-radius: 0;
+}
+
+.legend {
+    display: flex;
+    gap: 25px;
+}
+
+.legend-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 0.85rem;
+    color: var(--text-dim);
+    transition: color 0.3s;
+}
+
+.legend-item:hover {
+    color: var(--text-main);
+}
+
+.dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+}
+
+.dot.default {
+    background: var(--secondary);
+    box-shadow: 0 0 8px var(--secondary-glow);
+}
+
+.dot.comparing {
+    background: var(--accent-amber);
+    box-shadow: 0 0 8px var(--accent-amber);
+}
+
+.dot.swapping {
+    background: var(--accent-pink);
+    box-shadow: 0 0 8px var(--accent-pink);
+}
+
+.dot.sorted {
+    background: var(--success-green);
+    box-shadow: 0 0 8px var(--success-green);
+}
+
+.stats {
+    font-size: 0.9rem;
+    color: var(--text-dim);
+}
+
+.mono {
+    font-family: 'Fira Code', monospace;
+    color: var(--secondary);
+    font-weight: 600;
+    margin-left: 8px;
+}
